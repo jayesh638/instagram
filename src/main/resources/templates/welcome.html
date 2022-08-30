@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<main role="main">
+    <div style="text-align:center;">
+        <div style="background-color:#42AFD0; width:120px;height:120px;margin:auto;padding:20px;display:flex;justify-content:center;">
+            <img th:src="@{/css/img/logo.png}" height="100" width="100" >
+        </div>
+        <h2>LOAN FRAME PHOTO CLICK CONTEST 2022</h2>
+        <h3>Tech Team Participants</h3>
+        <table style="text-align:left;margin-left:auto;margin-right:auto">
+
+            <tr>
+                <td>
+                    <h4>BE Developer: Amit Kuntal</h4>
+                </td>
+                <td>
+                    <a href="/login">
+                        <button style="border-radius: 10px;padding: 4px 20px;font-size: 14px;background-color: #008CBA;text-align: center;">
+                            Vote
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>BE Developer: Jayesh Sisodiya</h4>
+                </td>
+                <td>
+                    <a href="/login">
+                        <button style="border-radius: 10px;padding: 4px 20px;font-size: 14px;background-color: #008CBA;text-align: center;">
+                            Vote
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>FE Developer: Ankur Tiwari</h4>
+                </td>
+                <td>
+                    <a href="/login">
+                        <button style="border-radius: 10px;padding: 4px 20px;font-size: 14px;background-color: #008CBA;text-align: center;">
+                            Vote
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>FE Developer: Saurabh Dhakate</h4>
+                </td>
+                <td>
+                    <a href="/login">
+                        <button style="border-radius: 10px;padding: 4px 20px;font-size: 14px;background-color: #008CBA;text-align: center;">
+                            Vote
+                        </button>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p>@HR Department Loan Frame, Gurugram, Haryana(122001)</p>
+    </div>
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

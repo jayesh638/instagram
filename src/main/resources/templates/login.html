@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Person</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+
+<!--
+   In Thymeleaf the equivalent of
+   JSP's ${pageContext.request.contextPath}/edit.html
+   would be @{/edit.html}
+   -->
+
+<!--<form th:action="@{/addPerson}"
+      th:object="${personForm}" method="POST">
+    First Name:
+    <input type="text" th:field="*{username}" />
+    <br/>
+    Last Name:
+    <input type="text" th:field="*{password}" />
+    <br/>
+    <input type="submit" value="Create" />
+</form>-->
+
+<!--<br/>-->
+
+<div class="container">
+    <div class="box">
+        <div class="heading"></div>
+        <form class="login-form" th:action="@{/login}" th:object="${personForm}" method="POST">
+            <div class="field">
+                <input
+                        id="username"
+                        type="text"
+                        placeholder="Phone number, username, or email" th:field="*{username}"
+                />
+                <label for="username">Phone number, username, or email</label>
+            </div>
+            <div class="field">
+                <input id="password" type="password" placeholder="password" th:field="*{password}"/>
+                <label for="password">Password</label>
+            </div>
+            <button class="login-button" type="submit" title="login">
+                <div>Log In</div>
+            </button>
+            <div class="separator">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+            </div>
+            <div class="other">
+                <button class="fb-login-btn" type="button">
+                    <i class="fa fa-facebook-official fb-icon"></i>
+                    <span class="">Log in with Facebook</span>
+                </button>
+                <a class="forgot-password" href="#">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+    <div class="box">
+        <p>Don't have an account? <a class="signup" href="#">Sign Up</a></p>
+    </div>
+</div>
+
+<!-- Check if errorMessage is not null and not empty -->
+
+<div th:if="${errorMessage}" th:utext="${errorMessage}"
+     style="color:red;font-style:italic;text-align:center;">
+    ...
+</div>
+
+</body>
+</html>
