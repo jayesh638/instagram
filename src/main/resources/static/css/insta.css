@@ -98,8 +98,8 @@ body, button, input {
 .content {
   color:#262626;
   flex-grow:1;
-  justify-content: center;
-  max-width: 350px;
+  /*justify-content: center;*/
+  max-width: 500px;
   margin-top:12px;
   -webkit-box-pack: justify;
     -moz-box-pack: justify;
