@@ -17,7 +17,7 @@ public class LoginController {
     @Resource
     LoginService loginService;
 
-    @RequestMapping("/")
+    @RequestMapping("/vote/jayesh-sisodiya")
     public String index(Model model)
     {
         return "welcome";
